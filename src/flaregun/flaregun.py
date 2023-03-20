@@ -1,6 +1,8 @@
 import pynvml
 
 class GPUStats:
+    """Get statistics for a specific GPU device, e.g. current memory usage."""
+
     def __init__(self, device: int = 0):
         """Get information on a specific GPU device
 
@@ -36,6 +38,8 @@ class GPUStats:
         print(f"GPU memory usage: {info.used//1024**2} / {info.total//1024**2} MB")
 
 class ModelStats:
+    """Get statistics for a specific PyTorch model, e.g. total number of parameters."""
+    
     def __init__(self, model):
         """Get information on a specific PyTorch model.
 

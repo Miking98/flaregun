@@ -1,4 +1,5 @@
-from flaregun.flaregun import ModelStats
+from flaregun import ModelStats
+from flaregun import GPUStats
 import torch
 
 def test_model():
@@ -16,3 +17,11 @@ def test_model():
 
 	model = Model(100, 200, 10)
 	assert ModelStats(model).total() == 100 * 200 + 200 + 200 * 200 + 200 + 200 * 10 + 10
+
+def test_gpu():
+	gpu = GPUStats(0)
+	# Can't do anything without a GPU
+
+if __name__ == '__main__':
+	test_model()
+	test_gpu()

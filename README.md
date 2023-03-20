@@ -80,6 +80,22 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 poetry run pytest tests/
 ```
 
+### Test PyPI
+
+Publish:
+
+```bash
+poetry publish -r test-pypi --username XXX --password XXXX
+```
+
+Install:
+```bash
+pip install --index-url https://test.pypi.org/simple/ \
+  --extra-index-url https://pypi.org/simple flaregun
+```
+
+### PyPI
+
 ### Building Docs
 
 ```bash
