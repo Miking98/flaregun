@@ -82,6 +82,13 @@ poetry run pytest tests/
 
 ### Test PyPI
 
+Create release:
+```
+git tag vXX.XX.XXX
+git push --tags
+# Then go to Github and link this tag to a Release
+```
+
 Publish:
 
 ```bash

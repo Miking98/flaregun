@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flaregun"
-version = "0.1.0"
+version = "0.0.2"
 description = "Tiny PyTorch helper package to get stats on GPU usage, model params, etc."
 authors = ["Michael Wornow"]
 license = "MIT"
