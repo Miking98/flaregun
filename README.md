@@ -26,7 +26,7 @@ Get parameter count in any PyTorch compatible model (e.g. HuggingFace, etc.):
 from flaregun import ModelStats
 
 # Get HuggingFace model
-model = AutoModelForMaskedLM.from_pretrained("/path/to/Longformer-Model")
+model = AutoModelForMaskedLM.from_pretrained("yikuan8/Clinical-Longformer")
 
 # Pretty print Model parameter count
 ModelStats(model).print()
