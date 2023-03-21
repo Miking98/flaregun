@@ -28,7 +28,7 @@ Get real-time Nvidia GPU memory usage in Python:
 ```python
 from flaregun import GPUStats
 
-# Pretty print statistics for GPU #0
+# Pretty print statistics for Nvidia GPU #0
 GPUStats(device=0).print()
 > "GPU memory usage: 3061 / 32510 MB"
 ```
