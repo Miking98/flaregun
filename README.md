@@ -2,6 +2,19 @@
 
 A simple helper package for PyTorch to get better visibility on real-time GPU usage, model params, etc.
 
+![logo](assets/logo.png)
+
+```python
+from flaregun import GPUStats, ModelStats
+
+GPUStats(device=0).print()
+> "GPU memory usage: 3061 / 32510 MB"
+
+from transformers import AutoModel
+ModelStats(AutoModel.from_pretrained('gpt2')).print()
+> "124439808 params (124439808 trainable | 0 non-trainable)"
+```
+
 ## Installation
 
 ```bash
@@ -26,11 +39,12 @@ Get parameter count in any PyTorch compatible model (e.g. HuggingFace, etc.):
 from flaregun import ModelStats
 
 # Get HuggingFace model
-model = AutoModelForMaskedLM.from_pretrained("/path/to/Longformer-Model")
+from transformers import AutoModel
+model = AutoModel.from_pretrained("gpt2")
 
 # Pretty print Model parameter count
 ModelStats(model).print()
-> "148711257 params (148711257 trainable | 0 non-trainable)"
+> "124439808 params (124439808 trainable | 0 non-trainable)"
 ```
 
 ## API
